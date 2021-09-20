@@ -12,6 +12,16 @@ nav, ul, li, ol, dl, dt, dd {
   box-sizing: border-box;
 }
 
+@keyframes rotation {
+  from {transform: rotate(0);}
+  to {transform: rotate(1turn);}
+}
+@keyframes lights {
+  0% {transform: rotate(1deg);}
+  50% {transform: rotate(-1deg);}
+  100% {transform: rotate(1deg);}
+}
+
 
 #lp {
   position: relative;
@@ -26,17 +36,12 @@ nav, ul, li, ol, dl, dt, dd {
   justify-content: center;
 }
 
-@keyframes rotation {
-  from {transform: rotate(0);}
-  to {transform: rotate(1turn);}
-}
-
 .gradients {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  opacity: 0;
+  opacity: 0.5;
   background-color: black;
   display: flex;
   flex-wrap: wrap;
@@ -60,6 +65,83 @@ nav, ul, li, ol, dl, dt, dd {
   background: linear-gradient(40deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 36%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,0) 100%);
 }
 
+.highlights {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  animation: 1s lights infinite;
+}
+
+.first {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  transform: rotate(55deg);
+}
+
+.highlight {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border-left: 2px solid white;
+  /* background-color: white; */
+  bottom: 50%;
+  right: 50%;
+  border-radius: 25% 25% 25% 25% / 100%;
+  /* border-radius: 0 78% 3% 2% / 0 84% 14% 0%; */
+  filter: blur(1px);
+  box-shadow: -1px 0px 0px 0 #ffffff;
+}
+.highlight:nth-child(2n) {
+  transform: scale(1.1) rotate(-2deg);
+}
+.highlight:nth-child(3n) {
+  transform: rotate(2deg) scale(1.2);
+}
+
+.light0 {
+  right: 57%;
+}
+.light1 {
+  right: 48%;
+}
+
+.light2 {
+  right: 42%;
+}
+
+.light3 {
+  right: 35%;
+}
+
+.light4 {
+  right: 32%;
+}
+
+.light6 {
+  right: 25%;
+}
+
+.light7 {
+  right: 18%;
+}
+
+.light8 {
+  right: 15%;
+}
+
+.light9 {
+  right: 12%;
+}
+
+.light10 {
+  right: 5%;
+}
+
 
 .record {
   width: 100%;
@@ -76,7 +158,7 @@ nav, ul, li, ol, dl, dt, dd {
   width: 30%;
   height: 30%;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
 .lp_line:nth-child(1) {
