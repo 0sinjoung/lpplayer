@@ -1,3 +1,67 @@
-* {
+body {
+  margin:0; 
+  padding:0;
+  width:100%;
+  height:100%;
+  background-color: bisque;
+}
+div, header, footer, section, article, template, aside, h1, h2, h3, h4, h5, h6, p
+nav, ul, li, ol, dl, dt, dd { 
+  margin: 0; 
+  padding: 0; 
   box-sizing: border-box;
 }
+
+
+#lp {
+  position: relative;
+  width: 50vw;
+  height: 50vw;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.5) 100%);
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 1s rotation infinite linear;
+}
+
+@keyframes rotation {
+  from {transform: rotate(0);}
+  to {transform: rotate(1turn);}
+}
+
+.lp_line {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.lp_line:nth-child(1) {
+  width: 85%;
+  height: 85%;
+}
+.lp_line:nth-child(2) {
+  width: 70%;
+  height: 70%;
+}
+.lp_line:nth-child(3) {
+  width: 55%;
+  height: 55%;
+}
+
+.cover {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  border: 30px solid black;
+  background-color: burlywood;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
